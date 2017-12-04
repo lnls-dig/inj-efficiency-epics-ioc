@@ -27,6 +27,7 @@ O.*/
 # CSS files
 op/opi/logs.*
 op/opi/.metadata
+op/opi/configuration
 
 # Documentation files
 documentation/*.aux
