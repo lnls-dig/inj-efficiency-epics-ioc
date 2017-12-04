@@ -1,0 +1,30 @@
+[Unit]
+Description=INJECTION EFFICIENCY IOC %p%I
+After=rc-local.service
+Wants=rc-local.service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+# Source environment
+EnvironmentFile=/etc/sysconfig/inj-efficiency-epics-ioc
+EnvironmentFile=/etc/sysconfig/inj-efficiency-epics-ioc-mapping
+# Execute pre with root
+PermissionsStartOnly=true
+Environment=INJ_EFFICIENCY_INSTANCE=%i
+ExecStartPre=/bin/mkdir -p /var/log/procServ/%p%i
+ExecStartPre=/bin/mkdir -p /var/run/procServ/%p%i
+#WorkingDirectory=${INJ_EFFICIENCY_IOC_STARTUP}
+WorkingDirectory=/opt/epics/startup/ioc/inj-efficiency-epics-ioc/iocBoot/iocInjEfficiency
+# Run procServ with IOC
+ExecStart=/bin/bash -c "\
+    export INJ_EFFICIENCY_DEVICE_TELNET_PORT_SUFFIX=INJ_EFFICIENCY$${INJ_EFFICIENCY_INSTANCE}_PORT_SUFFIX && \
+    /usr/local/bin/procServ \
+    -f \
+    -n %p%i \
+    -i ^C^D \
+    $${PROCSERV_INJ_EFFICIENCY_PORT_PREFIX}$${!INJ_EFFICIENCY_DEVICE_TELNET_PORT_SUFFIX} \
+    ./runGenericCT.sh"
+
+[Install]
+WantedBy=multi-user.target

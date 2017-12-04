@@ -1,0 +1,6 @@
+# General configuration
+INJ_EFFICIENCY_IOC_STARTUP=/opt/epics/startup/ioc/inj-efficiency-epics-ioc/iocBoot/iocInjEfficiency
+EPICS_HOST_ARCH=linux-x86_64
+PROCSERV_INJ_EFFICIENCY_PORT_PREFIX=400
+EPICS_CA_MAX_ARRAY_BYTES=50000000
+PATH=/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/epics/base/bin/linux-x86_64
