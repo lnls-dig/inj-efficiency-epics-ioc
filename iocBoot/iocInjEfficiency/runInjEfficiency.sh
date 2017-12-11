@@ -12,11 +12,6 @@ if [ $? -ne 0 ]; then
 	exit 1
 fi
 
-if [ -z "$P" ] && [ -z "$R" ]; then
-    echo "\$P and \$R are not set, Please use -P and/or -R option" >&2
-    exit 7
-fi
-
 if [ -z "$ICT1" ]; then
     echo "\$ICT1 is not set, Please use -f option" >&2
     exit 7

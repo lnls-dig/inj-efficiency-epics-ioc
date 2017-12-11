@@ -7,7 +7,7 @@ while [ "$#" -gt 0 ]; do
         "-f"|"--first-ict-charge-pv") ICT1="$2" ;;
         "-s"|"--second-ict-charge-pv") ICT2="$2" ;;
         *) echo "Usage:" >&2
-            echo "  $0 -f ICT_1_CHARGE_PV -s ICT_2_CHARGE_PV -P P_VAL [-R R_VAL] " >&2
+            echo "  $0 -f ICT_1_CHARGE_PV -s ICT_2_CHARGE_PV [-P P_VAL] [-R R_VAL] " >&2
             echo >&2
             echo " Options:" >&2
             echo "  -f or --first-ict-charge-pv              Configure name of charge monitor PV of first ICT " >&2
