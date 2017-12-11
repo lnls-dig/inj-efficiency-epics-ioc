@@ -24,7 +24,7 @@ ExecStart=/bin/bash -c "\
     -n %p%i \
     -i ^C^D \
     $${PROCSERV_INJ_EFFICIENCY_PORT_PREFIX}$${!INJ_EFFICIENCY_DEVICE_TELNET_PORT_SUFFIX} \
-    ./runGenericCT.sh"
+    ./runInjEfficiency.sh"
 
 [Install]
 WantedBy=multi-user.target
