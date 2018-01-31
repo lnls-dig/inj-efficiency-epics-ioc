@@ -12,7 +12,7 @@ asSetFilename("$(TOP)/injEfficiencyApp/Db/accessSecurityFile.acf")
 ## Load record instances
 dbLoadRecords("${TOP}/db/injEfficiency.db", "P=${P}, R=${R}, ict-1-charge-pv=${ICT1}, ict-2-charge-pv=${ICT2}")
 
-< save_restore.cmd
+#< save_restore.cmd
 
 ## Run this to trace the stages of iocInit
 #traceIocInit
