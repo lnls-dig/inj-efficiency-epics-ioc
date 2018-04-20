@@ -14,8 +14,7 @@ PermissionsStartOnly=true
 Environment=INJ_EFFICIENCY_INSTANCE=%i
 ExecStartPre=/bin/mkdir -p /var/log/procServ/%p%i
 ExecStartPre=/bin/mkdir -p /var/run/procServ/%p%i
-#WorkingDirectory=${INJ_EFFICIENCY_IOC_STARTUP}
-WorkingDirectory=/opt/epics/startup/ioc/inj-efficiency-epics-ioc/iocBoot/iocInjEfficiency
+WorkingDirectory=<INSTALL_PREFIX>/<IOC_NAME>/iocBoot/iocInjEfficiency
 # Run procServ with IOC
 ExecStart=/bin/bash -c "\
     export INJ_EFFICIENCY_DEVICE_TELNET_PORT_SUFFIX=INJ_EFFICIENCY$${INJ_EFFICIENCY_INSTANCE}_PORT_SUFFIX && \
