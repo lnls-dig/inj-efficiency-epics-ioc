@@ -33,3 +33,10 @@ while getopts ":t:P:R:f:s:" opt; do
       ;;
   esac
 done
+
+# if getopts did not process all input
+if [ "$OPTIND" -le "$#" ]; then
+    echo "Invalid argument '$OPTARG' does not have a corresponding option." >&2
+    usage $0
+    exit 1
+fi
