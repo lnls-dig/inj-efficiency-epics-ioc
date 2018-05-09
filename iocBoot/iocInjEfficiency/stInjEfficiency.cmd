@@ -1,4 +1,7 @@
 < envPaths
+
+epicsEnvSet("TOP", "../..")
+
 < injEfficiency.config
 
 ####################################################
