@@ -1,3 +1,6 @@
+# generated systemd files
+scripts/systemd/etc/systemd/system/*.service
+
 # General files
 *.orig
 *.swap
@@ -7,9 +10,9 @@
 *.swp
 
 # EPICS generated
-bin
-lib
-include
+/bin/
+/lib/
+/include/
 db
 dbd
 *_BAK.adl
@@ -27,7 +30,9 @@ O.*/
 # CSS files
 op/opi/logs.*
 op/opi/.metadata
-op/opi/configuration
+.metadata/
+logs*
+configuration/
 
 # Documentation files
 documentation/*.aux
