@@ -1,3 +1,6 @@
+# generated systemd files
+scripts/systemd/etc/systemd/system/*.service
+
 # General files
 *.orig
 *.swap
@@ -27,6 +30,9 @@ O.*/
 # CSS files
 op/opi/logs.*
 op/opi/.metadata
+.metadata/
+logs*
+configuration/
 
 # Documentation files
 documentation/*.aux
