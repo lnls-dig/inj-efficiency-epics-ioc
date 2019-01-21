@@ -1,4 +1,19 @@
 ########################################################################
+# Monitored ICT data info
+
+record(stringin, "$(P)$(R)ICT1ChargePV-Cte"){
+  field(ASG, "Reserved")
+  field(DESC, "ICT 1 charge PV")
+  field(VAL, "$(ict-1-charge-pv)")
+}
+
+record(stringin, "$(P)$(R)ICT2ChargePV-Cte"){
+  field(ASG, "Reserved")
+  field(DESC, "ICT 2 charge PV")
+  field(VAL, "$(ict-2-charge-pv)")
+}
+
+########################################################################
 # Monitor new ICT data
 # Desc: Monitor new data from ICTs and set the new data flag.
 
