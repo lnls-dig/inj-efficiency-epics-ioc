@@ -10,7 +10,7 @@
   <background_color>
     <color red="240" green="240" blue="240" />
   </background_color>
-  <boy_version>5.1.0.201711290101</boy_version>
+  <boy_version>5.1.0</boy_version>
   <foreground_color>
     <color red="192" green="192" blue="192" />
   </foreground_color>
@@ -161,7 +161,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Ubuntu" height="32" style="0" pixels="false" />
+      <opifont.name fontName="Ubuntu" height="19" style="1" pixels="false">Header 1</opifont.name>
     </font>
     <foreground_color>
       <color red="0" green="0" blue="0" />
@@ -351,13 +351,13 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Ubuntu" height="16" style="0" pixels="false" />
+      <opifont.name fontName="Ubuntu" height="11" style="1" pixels="false">Default Bold</opifont.name>
     </font>
     <foreground_color>
       <color red="0" green="0" blue="0" />
     </foreground_color>
-    <height>20</height>
-    <horizontal_alignment>1</horizontal_alignment>
+    <height>27</height>
+    <horizontal_alignment>0</horizontal_alignment>
     <name>Label_2</name>
     <rules />
     <scale_options>
@@ -372,11 +372,11 @@ $(pv_value)</tooltip>
     <vertical_alignment>1</vertical_alignment>
     <visible>true</visible>
     <widget_type>Label</widget_type>
-    <width>187</width>
+    <width>163</width>
     <wrap_words>false</wrap_words>
     <wuid>-4107d8cc:15c0c501b11:-759f</wuid>
-    <x>24</x>
-    <y>150</y>
+    <x>36</x>
+    <y>146</y>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.xyGraph" version="1.0.0">
     <actions hook="false" hook_all="false" />
@@ -595,7 +595,7 @@ $(pv_value)</tooltip>
     </scale_options>
     <scripts />
     <show_units>true</show_units>
-    <text>######</text>
+    <text>####</text>
     <tooltip>$(pv_name)
 $(pv_value)</tooltip>
     <transparent>false</transparent>
@@ -621,7 +621,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Ubuntu" height="16" style="0" pixels="false" />
+      <opifont.name fontName="Ubuntu" height="11" style="0" pixels="false">Default</opifont.name>
     </font>
     <foreground_color>
       <color red="0" green="0" blue="0" />
@@ -645,7 +645,7 @@ $(pv_value)</tooltip>
     <width>115</width>
     <wrap_words>false</wrap_words>
     <wuid>7d7ad064:160133fd194:-7ec9</wuid>
-    <x>48</x>
+    <x>36</x>
     <y>228</y>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0.0">
@@ -991,7 +991,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Ubuntu" height="11" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Ubuntu" height="9" style="0" pixels="false">Fine Print</opifont.name>
     </font>
     <foreground_color>
       <color red="0" green="0" blue="0" />
@@ -1017,7 +1017,7 @@ $(pv_value)</tooltip>
     <wrap_words>true</wrap_words>
     <wuid>7d7ad064:160133fd194:-7479</wuid>
     <x>447</x>
-    <y>211</y>
+    <y>212</y>
   </widget>
   <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
     <actions hook="false" hook_all="false" />
@@ -1032,7 +1032,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <fontdata fontName="Ubuntu" height="16" style="0" pixels="false" />
+      <opifont.name fontName="Ubuntu" height="11" style="0" pixels="false">Default</opifont.name>
     </font>
     <foreground_color>
       <color red="0" green="0" blue="0" />
@@ -1503,6 +1503,7 @@ $(pv_value)</tooltip>
       <include_parent_macros>true</include_parent_macros>
       <P>$(P_ICT1)</P>
       <R>$(R_ICT1)</R>
+      <Instrument>$(P_ICT1)$(R_ICT1)</Instrument>
     </macros>
     <name>Grouping Container</name>
     <rules />
@@ -1601,6 +1602,7 @@ $(pv_value)</tooltip>
       <include_parent_macros>true</include_parent_macros>
       <P>$(P_ICT2)</P>
       <R>$(R_ICT2)</R>
+      <Instrument>$(P_ICT2)$(R_ICT2)</Instrument>
     </macros>
     <name>Grouping Container_1</name>
     <rules />
